@@ -1,0 +1,74 @@
+body{
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color: white;
+    padding: 3em;
+    border: .2em solid ;
+    border-radius: 3em;
+    -webkit-border-radius: 3em;
+    -moz-border-radius: 3em;
+    -ms-border-radius: 3em;
+    -o-border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+font-size: 4em;
+font-family: sans-serif;
+color: hsl(0, 0%, 25%);
+} 
+#display{
+    font-family: monospace;
+    font-size: 5em;
+    font-weight: bolder;
+    color: hsl(0, 0%, 30%);
+    text-shadow:  .1em .1em .1em hsl(0, 0%, 80%);
+    margin-bottom: .6em;
+}
+#controls{
+    display: flex;
+    gap: 1em;
+}
+#controls button{
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: .6em;
+    -webkit-border-radius: .6em;
+    -moz-border-radius: .6em;
+    -ms-border-radius: .6em;
+    -o-border-radius: .6em;
+    padding: .5em 1em;
+  
+    min-width: 4em;
+    transition:background-color .6s ease ;
+    -webkit-transition:background-color .6s ease ;
+    -moz-transition:background-color .6s ease ;
+    -ms-transition:background-color .6s ease ;
+    -o-transition:background-color .6s ease ;
+    cursor: pointer;
+}
+#start{
+    background-color: hsl(120, 100%, 40%);
+}
+#start:hover{
+    background-color: hsl(120, 100%, 30%);
+}
+#stop{
+    background-color: hsl(0, 100%, 60%);
+}
+#stop:hover{
+    background-color: hsl(0, 100%, 40%);
+}
+#reset{
+    background-color: hsl(232, 100%, 60%);
+}
+#reset:hover{
+    background-color: hsl(232, 100%, 40%);
+}
