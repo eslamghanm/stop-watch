@@ -14,11 +14,18 @@ timer =setInterval(update, 10);
 
     }
 }
+function stop() {
+    if(isRunning) {
+        clearInterval(timer);
+        elapsedTime = Date.now() - startTime;
+        isRunning = false;
+    }
+}
 function update() {
     const curentTime = Date.now();
     elapsedTime =curentTime - startTime;
     let hours = Math.floor(elapsedTime / ( 1000 * 60 * 60 ) );
-    let minutes =Math.floor~( elapsedTime / ( 1000 *60 )%60);
+    let minutes =Math.floor( elapsedTime / ( 1000 *60 )%60);
     let seconds = Math.floor(elapsedTime /1000 %60);
     let millisecond =Math.floor(elapsedTime %1000 /10);
     hours =String(hours).padStart(2 ,'0');
@@ -27,13 +34,6 @@ function update() {
     millisecond =String(millisecond).padStart(2 ,'0');
    
     display.textContent =`${hours}:${minutes}:${seconds}:${millisecond}`;
-}
-function stop() {
-    if(isRunning) {
-        clearInterval(timer);
-        elapsedTime = Date.now() - startTime;
-        isRunning = false;
-    }
 }
 function reset() {
     clearInterval(timer);
