@@ -48,3 +48,7 @@ function reset() {
 document.querySelector("#start").addEventListener("click", start);
 document.querySelector("#stop").addEventListener("click", stop);
 document.querySelector("#reset").addEventListener("click", reset);
+const clickSound = document.getElementById("click-sound");
+document.querySelectorAll("#controls button").forEach(btn => {
+    btn.addEventListener("click", () => clickSound.play());
+});

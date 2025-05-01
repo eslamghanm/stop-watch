@@ -54,6 +54,11 @@ color: hsl(0, 0%, 25%);
     -o-transition:background-color .6s ease ;
     cursor: pointer;
 }
+#controls button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
 #start{
     background-color: hsl(120, 100%, 40%);
 }
@@ -71,4 +76,30 @@ color: hsl(0, 0%, 25%);
 }
 #reset:hover{
     background-color: hsl(232, 100%, 40%);
+}
+/* media queries */
+/* media queries */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    #display {
+        font-size: 3em;
+    }
+
+    .container {
+        padding: 2em;
+        border-radius: 2em;
+    }
+
+    #controls {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    #controls button {
+        font-size: 1.2em;
+        padding: 0.4em 0.8em;
+    }
 }
